@@ -87,20 +87,19 @@ const io = require('socket.io')(server, {
 
 const port = 5000;
 
-io.on("connection", (socket) =>{
-    console.log(`User Connected Successfully ${socket.id}`);
+io.on("connection", (socket) => {
+  console.log(`User Connected Successfully ${socket.id}`);
 
-    
+  socket.on('saveDocument', (savedDocument) => {
+    // Broadcast the updated document to all connected clients
+    socket.broadcast.emit("documentUpdate", savedDocument);
+    console.log("Document Saved")
+    io.emit('documentUpdate', savedDocument);
+  });
 
-    socket.on('saveDocument', (savedDocument) =>{
-      console.log(savedDocument)
-      socket.broadcast.emit("Saved Document", savedDocument)
-        io.emit('documentUpdate', savedDocument);
-    });
-
-    socket.on("disconnect", () =>{
-        console.log("User Disconnected");
-    });
+  socket.on("disconnect", () => {
+    console.log("User Disconnected");
+  });
 });
 
 app.use('/api/auth', require('./routes/auth'));
