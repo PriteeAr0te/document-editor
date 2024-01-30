@@ -1,1 +1,67 @@
 @import url("https://cdn.syncfusion.com/ej2/24.1.46/bootstrap5.css");
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	color: rgba(0,0,0,.87)
+}
+body {
+	background: linear-gradient(90deg, rgba(2,0,36,1)0%, rgba(75,14,154,1) 35%, rgba(0,212, 255,1) 100%);
+	/* background: linear-gradient(to right,#cc2b5e,#753a88); */
+	font-family: 'Poppins', sans-serif;
+}
+.form {
+	background-color: aliceblue;
+	padding: 40px;
+	border-radius: 20px;
+	width: 35%;
+    margin-top: 5%;
+
+	@media only screen and (max-width: 770px) {
+		width: 100%;
+	  }
+	}
+
+
+.nav-button {
+	background: linear-gradient(90deg, rgba(2,0,36,1)0%, rgba(75,14,54,1) 35%, rgba(0,212, 255,1) 100%);
+	border: none;
+	border-radius: 50px;
+	color: aliceblue;
+}
+
+.form-check-input {
+	border: 1px solid;
+}
+
+.button {
+	margin-top: 8%;
+	background: linear-gradient(90deg, rgba(2,0,36,1)0%, rgba(75,14,154,1) 35%, rgba(0,212, 255,1) 100%);
+	border: none;
+	border-radius: 50px;
+	color: aliceblue;
+}
+
+.form-control {
+	/* color: rgba(0,0,0,.87); */
+	color: black;
+	border: none;
+	border-bottom-color: rgba(0,0,0,.42);
+	box-shadow: none !important;
+	border-bottom: 1px solid;
+	border-radius: 4px, 4px, 0, 0;
+}
+
+.form-title {
+	font-size: 2rem !important;
+	font-weight: 700;
+}
+.form-label {
+	font-size: 700 !important;
+}
+/* .container-fluid {
+
+} */

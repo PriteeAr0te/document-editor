@@ -38,25 +38,22 @@ const Login = () => {
     }
 
   return (
-    <div className="container mt-3">
-    <div className="row justify-content-center">
-      <div className="col-md-6">
-        <form onSubmit={handleSubmit}>
-          <div className="form-group">
-            <label htmlFor="email">Username: </label>
+    <div className="container-fluid">
+        <form className="form mx-auto" onSubmit={handleSubmit}>
+          <h2 className=' form-title text-center'>Login</h2>
+          <div className="mb-3 mt-5">
+            <label className="form-label fw-semibold" htmlFor="email"> <i className="fa-solid fa-user"></i><span className='ml-3'> Username  </span></label>
             <input type="text" className="form-control"  name="username"
             onChange = {onChange} value = {credentials.username} id="username" placeholder="Enter Username" required/>
           </div>
-          <div className="form-group">
-            <label htmlFor="password">Password</label>
+          <div className="mb-3">
+            <label className="form-label fw-semibold" htmlFor="password"> <i className=" mr-2 fa-solid fa-unlock-keyhole"></i><span className='ml-3'> Password</span></label>
             <input type="password" className="form-control" name="password"
             onChange = {onChange} value = {credentials.password} id="password" placeholder="Enter password" required/>
           </div>
-          <button type="submit" className="btn btn-primary my-3">Login</button>
-          <button type="button" className="btn btn-primary my-3 mx-3">Close</button>
-        </form>
-      </div>
-    </div>
+          <button type="submit" className="btn button my-3">Login</button>
+          <button type="button" className="btn button my-3 mx-3 ">Close</button>
+        </form> 
   </div>
   );
 };

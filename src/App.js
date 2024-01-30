@@ -5,6 +5,7 @@ import DocumentEditor from './components/DocumentEditor';
 import Login from './components/Login';
 import Register from './components/Register';
 import Navbar from './components/Navbar';
+// import Home from './components/Home';
 import {
   BrowserRouter,
   Routes,
@@ -20,6 +21,7 @@ function App() {
       <Navbar/>
       <div className="container my-3">
       <Routes>
+        {/* <Route path="/" element={<Home />} /> */}
         <Route path="/" element={<DocumentEditor />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register/>} />
